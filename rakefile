@@ -8,7 +8,7 @@ namespace :test do
   	  t.spec_files = FileList['./test/*.rb']
   	  t.rcov = true
   	  t.rcov_opts = ['--text-report', '--exclude', ".gem,test,Library,#{ENV['GEM_HOME']}", '--sort', 'coverage']
-  	  t.spec_opts = ['-cfn']
+  	  #t.spec_opts = ['-cfn']
   	end
 
 end
