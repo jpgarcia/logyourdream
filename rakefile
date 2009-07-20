@@ -8,6 +8,7 @@ namespace :test do
   	Spec::Rake::SpecTask.new('coverage') do |t| 
   	  p File.read('/disk1/var/tmp/userapps/31695_131e6b7_e5ff/jpgarcia-logyourdream-master/test/model.test.rb')	  
   	  t.spec_files = FileList['/disk1/var/tmp/userapps/31695_131e6b7_e5ff/jpgarcia-logyourdream-master/test/*.test.rb']
+  	  t.rcov_dir = '/disk1/var/tmp/userapps/31695_131e6b7_e5ff/jpgarcia-logyourdream-master'
   	  t.rcov = true
   	  t.rcov_opts = ['--text-report', '--exclude', ".gem,test,Library,#{ENV['GEM_HOME']}", '--sort', 'coverage']
   	  t.spec_opts = ['-cfn']
