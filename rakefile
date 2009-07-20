@@ -5,9 +5,9 @@ require 'rcov'
 namespace :test do
 
   desc 'Measures test coverage'
-  	Spec::Rake::SpecTask.new('coverage') do |t|  	  
-  	  t.libs = [ "/home/slugs/31695_131e6b7_e5ff/mnt/.gems/gems/rcov-0.8.1.2.0/lib/" ]
-  	  t.spec_files = FileList['./test/*.rb']
+  	Spec::Rake::SpecTask.new('coverage') do |t| 
+  	  p File.read('./tmp/test/model.test.rb')	  
+  	  t.spec_files = FileList['./tmp/test/model.test.rb']
   	  t.rcov = true
   	  t.rcov_opts = ['--text-report', '--exclude', ".gem,test,Library,#{ENV['GEM_HOME']}", '--sort', 'coverage']
   	  t.spec_opts = ['-cfn']
