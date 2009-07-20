@@ -7,6 +7,7 @@ namespace :test do
   desc 'Measures test coverage'
   	Spec::Rake::SpecTask.new('coverage') do |t| 
   	  p File.read('/disk1/var/tmp/userapps/31695_131e6b7_e5ff/jpgarcia-logyourdream-master/test/model.test.rb')	  
+  	  p File.read('./tmp/jpgarcia-logyourdream-master/test/model.test.rb')	  
   	  t.spec_files = FileList['/disk1/var/tmp/userapps/31695_131e6b7_e5ff/jpgarcia-logyourdream-master/test/*.test.rb']
   	  t.rcov = true
   	  t.rcov_opts = ['--text-report', '--exclude', '--trace', ".gem,test,Library,#{ENV['GEM_HOME']}", '--sort', 'coverage']
